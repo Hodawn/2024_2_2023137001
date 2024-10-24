@@ -17,6 +17,6 @@ namespace MyGame.QuestSystem
             Debug.Log($"Granted {experienceAmount} experience");
         }
 
-        private string GetDescription() => $"{experienceAmount}Experience Points";      //보상 내용을 문자열로 반환
+        public string GetDescription() => $"{experienceAmount}Experience Points";      //보상 내용을 문자열로 반환
     }
 }

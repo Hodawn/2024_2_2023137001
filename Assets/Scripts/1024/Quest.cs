@@ -8,7 +8,7 @@ namespace MyGame.QuestSystem
 {
     public class Quest 
     {
-        public string ID { get; set; }      //퀘스트 고유 식별자
+        public string Id { get; set; }      //퀘스트 고유 식별자
         public string Title {  get; set; }  //퀘스트 제목
         public string Description { get; set; }     //퀘스트의 상세 설명
         public QuestType Type { get; set; }     //퀘스트 유형

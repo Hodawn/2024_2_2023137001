@@ -36,10 +36,10 @@ public class CraftingMaterial : IItem
         public int ID { get; private set; }
         public int Damage { get; private set; }
 
-        public Weapon(string name, int iD, int damage)
+        public Weapon(string name, int id, int damage)
         {
             Name = name;
-            ID = iD;
+            ID = id;
             Damage = damage;
         }
 
@@ -123,23 +123,32 @@ public class CraftingMaterial : IItem
 
     public class InventoryManager : MonoBehaviour
     {
-        private Inventory<IItem> playerInventory;
+        private Inventory<IItem> playerInventory=new Inventory<IItem>();
         public int UseBagIndex;
 
         private void Start()
         {
             playerInventory = new Inventory<IItem>();
 
+            //¾ÆÀÌÅÛ Ãß°¡ 
             playerInventory.AddItem(new Weapon("Sword", 1, 10));
             playerInventory.AddItem(new HealthPotion("Small Potion", 2, 20));
 
-            playerInventory.AddItem(new CraftingMaterial("Iron Ingot", 101));       //ID 101: Ã¶ ÁÖ±«
-            playerInventory.AddItem(new CraftingMaterial("Iron Ingot", 101));       //ID 101: Ã¶ ÁÖ±«
-            playerInventory.AddItem(new CraftingMaterial("Wood", 102));       //ID 102: ³ª¹«
+            playerInventory.AddItem(new CraftingMaterial("Iron Ingot", 101));           //ID 101 : Ã¶ ÁÖ±«
+            playerInventory.AddItem(new CraftingMaterial("Iron Ingot", 101));          //ID 101 : Ã¶ ÁÖ±«
+            playerInventory.AddItem(new CraftingMaterial("Wood", 102));                //ID 102 : ³ª¹«
 
-            playerInventory.AddItem(new CraftingMaterial("Herb", 201));       //ID 201: ¾àÃÊ
-            playerInventory.AddItem(new CraftingMaterial("Herb", 201));       //ID 201: ¾àÃÊ
-            playerInventory.AddItem(new CraftingMaterial("Water", 202));       //ID 202: ¹°
+            playerInventory.AddItem(new CraftingMaterial("Iron Ingot", 101));           //ID 101 : Ã¶ ÁÖ±«
+            playerInventory.AddItem(new CraftingMaterial("Iron Ingot", 101));          //ID 101 : Ã¶ ÁÖ±«
+            playerInventory.AddItem(new CraftingMaterial("Wood", 102));                //ID 102 : ³ª¹«
+
+            playerInventory.AddItem(new CraftingMaterial("Iron Ingot", 101));           //ID 101 : Ã¶ ÁÖ±«
+            playerInventory.AddItem(new CraftingMaterial("Iron Ingot", 101));           //ID 101 : Ã¶ ÁÖ±«
+            playerInventory.AddItem(new CraftingMaterial("Wood", 102));              //ID 102 : ³ª¹«
+
+            playerInventory.AddItem(new CraftingMaterial("Herb", 102));                 //ID 201 : ¾àÃÊ
+            playerInventory.AddItem(new CraftingMaterial("Herb", 102));                 //ID 201 : ¾àÃÊ
+            playerInventory.AddItem(new CraftingMaterial("Water", 202));            //ID 202 : ¹°
         }
         //ÀÎº¥Åä¸® Á¢±ÙÀÚ ¸Þ¼­µå Ãß°¡
         public Inventory<IItem> GetInventory()

@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Linq;
 
-namespace MyGame.CraftingSystem
-{
+
+
+
+
     //아이템 품질 등급
     public enum ItemQuality
     {
@@ -29,5 +34,5 @@ namespace MyGame.CraftingSystem
         bool isStackable { get; }
         int MaxStackSize { get; }
     }
-}
+
 

@@ -162,7 +162,7 @@ public class QuestManager : Singleton<QuestManager>
                     collectCondition.ItemCollected(itemId);
                     UpdateQuestProgress(quest.Id);
                 }
-{            }
+           }
         }
     }
 }

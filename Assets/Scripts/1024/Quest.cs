@@ -21,7 +21,7 @@ namespace MyGame.QuestSystem
 
         public Quest(string iD, string title, string description, QuestType type, int level)
         {
-            ID = iD;
+            Id = iD;
             Title = title;
             Description = description;
             Type = type;
